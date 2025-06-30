@@ -21,7 +21,7 @@ $product1->stock = "40";
 $product1->sku = "Tech001";
 
 echo $product1->name;
-// $product1->showDetails();
+$product1->showDetails();
 
 
 $product2 = new Product();
@@ -32,8 +32,8 @@ $product2->brand = "Walton";
 $product2->stock = "20";
 $product2->sku = "Tech002";
 
-// echo $product2->name;
-// $product2->showDetails();
+echo $product2->name;
+$product2->showDetails();
 
 
 
@@ -58,5 +58,5 @@ $person1->phone = "0190000000000";
 $person1->address = "Khulna";
 $person1->occupation = "Developer";
 
-// echo $person1->occupation;
+echo $person1->occupation;
 $person1->showProfile();
