@@ -27,5 +27,5 @@
 17. Live Class Seventeen - [ক্লাস ভিডিও](https://www.youtube.com/watch?v=-LiF6i-Osp8)
 18. Live Class Eightteen - [ক্লাস ভিডিও](https://www.youtube.com/watch?v=Rpc2as91AwM)
 19. Live Class Nineteen - [ক্লাস ভিডিও](https://www.youtube.com/watch?v=Y3-_tPH7NXc)
-20. Live Class Twenty - [ক্লাস ভিডিও]()
+20. Live Class Twenty - [ক্লাস ভিডিও](https://www.youtube.com/watch?v=E68zw4KT9X0)
 21. Live Class TwentyOne - [ক্লাস ভিডিও]()
