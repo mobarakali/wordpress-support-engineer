@@ -5,31 +5,39 @@
 [![PHP](https://img.shields.io/badge/-PHP-777BB4?style=flat-square&logo=php&logoColor=white)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/07.PHP/module2.md)
 [![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/08.MySQL/mysql-course-module.md)
 [![WordPress](https://img.shields.io/badge/-WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)]()
+
+- [ ] **ক্লাস ০১ কন্টেন্ট এখান থেকে শুরু এবং** [ক্লাস ভিডিও এখানে](https://youtu.be/ykp8A_xiIdg)
 ### ১। SQL ও RDBMS এর পরিচিতি
 - [ ] ডেটাবেজ কী?
+- [ ] টেবিল কী?
+- [ ] টেবিল রো 
+- [ ] টেবিল কলাম
+- [ ] ডেটাবেজ টেবিল
+- [ ] রেকর্ড, ফিল্ড
 - [ ] রিলেশনাল ডেটাবেজ কী?
 - [ ] RDBMS এর বৈশিষ্ট্য ও উপকারিতা
-- [ ] SQL কী এবং এর ইতিহাস
-- [ ] SQL বনাম NoSQL
-- [ ] DBMS বনাম RDBMS
-- [ ] জনপ্রিয় SQL সফটওয়্যার: MySQL, PostgreSQL, SQL Server
+- [ ] প্রাইমারি কী
+- [ ] ফরেন কী
+- [ ] কম্পোজিট প্রাইমারি কী
+- [ ] প্রয়োজনীয় টুলস
+    - [ ] লারাগন লোকাল সার্ভার
+    - [ ] phpmyadmin
 
 ### ২। SQL সিনট্যাক্স ও গঠন
 - [ ] SQL স্টেটমেন্ট লেখার নিয়ম
 - [ ] SQL কেস ইনসেনসিটিভ
 - [ ] সেমিকোলনের ব্যবহার
-- [ ] কমেন্ট লেখার নিয়ম
-- [ ] কীওয়ার্ড, ফাংশন, অপারেটর আলাদা করার কৌশল
-- [ ] Query formatting tips
 
 ### ৩। ডেটা ডেফিনিশন ল্যাংগুয়েজ (DDL)
 - [ ] CREATE DATABASE
 - [ ] CREATE TABLE
-- [ ] CREATE TABLE IF NOT EXISTS
-- [ ] CREATE TABLE LIKE
+- [ ] INSER INTO
 - [ ] ALTER TABLE – ADD COLUMN
 - [ ] ALTER TABLE – MODIFY COLUMN
 - [ ] ALTER TABLE – DROP COLUMN
+
+- [ ] **ক্লাস ০২ কন্টেন্ট এখান থেকে শুরু এবং** [ক্লাস ভিডিও এখানে]()
+
 - [ ] ALTER TABLE – RENAME COLUMN
 - [ ] RENAME TABLE
 - [ ] DROP TABLE
