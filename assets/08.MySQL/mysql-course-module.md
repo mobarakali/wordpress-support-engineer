@@ -38,22 +38,66 @@
 
 - [ ] **ক্লাস ০২ কন্টেন্ট এখান থেকে শুরু এবং** [ক্লাস ভিডিও এখানে]()
 
-- [ ] ALTER TABLE – RENAME COLUMN
-- [ ] RENAME TABLE
-- [ ] DROP TABLE
-- [ ] DROP DATABASE
-- [ ] TRUNCATE TABLE
-- [ ] COMMENT যুক্ত করা
+- [ ] SELECT দিয়ে সমস্ত ডেটা দেখানো  
+      `SELECT * FROM customers;`
 
-### ৪। ডেটা ম্যানিপুলেশন ল্যাংগুয়েজ (DML)
-- [ ] INSERT INTO
-- [ ] INSERT INTO SELECT
-- [ ] INSERT DEFAULT VALUE
-- [ ] SELECT
-- [ ] SELECT DISTINCT
-- [ ] SELECT WHERE
-- [ ] SELECT ORDER BY
-- [ ] SELECT LIMIT / OFFSET
+- [ ] নির্দিষ্ট কলাম (firstName, lastName) দেখানো  
+      `SELECT firstName, lastName FROM customers;`
+
+- [ ] CONCAT দিয়ে ফুলনেম তৈরি করা (AS সহ)  
+      `SELECT CONCAT(firstName, ' ', lastName) AS fullName FROM customers;`
+
+- [ ] WHERE দিয়ে একটি শহরের ডেটা ফিল্টার করা (e.g., Dhaka)  
+      `SELECT * FROM customers WHERE city = 'Dhaka';`
+
+- [ ] একাধিক শর্ত দিয়ে ডেটা ফিল্টার করা (AND কন্ডিশন)  
+      `SELECT * FROM customers WHERE city = 'Dhaka' AND lastName = 'Rahman';`
+
+- [ ] BETWEEN দিয়ে ID রেঞ্জে ফিল্টার করা  
+      `SELECT * FROM customers WHERE id BETWEEN 10 AND 20;`
+
+- [ ] IN দিয়ে একাধিক শহর সিলেক্ট করা  
+      `SELECT * FROM customers WHERE city IN ('Dhaka', 'Khulna', 'Sylhet');`
+
+- [ ] LIKE দিয়ে পারশিয়াল ইমেইল খোঁজা  
+      `SELECT * FROM customers WHERE email LIKE '%rahman%';`
+
+- [ ] ORDER BY দিয়ে নাম অনুযায়ী সাজানো (ASC/Descending)  
+      `SELECT * FROM customers ORDER BY firstName ASC;`
+
+- [ ] LIMIT দিয়ে সর্বশেষ ১০টি রেকর্ড দেখানো  
+      `SELECT * FROM customers ORDER BY id DESC LIMIT 10;`
+
+- [ ] DISTINCT দিয়ে ইউনিক সিটি লিস্ট দেখানো  
+      `SELECT DISTINCT city FROM customers;`
+
+- [ ] LIKE দিয়ে S দিয়ে শুরু হওয়া নাম খোঁজা  
+      `SELECT * FROM customers WHERE firstName LIKE 'S%';`
+
+- [ ] IS NOT NULL দিয়ে address যেটা null নয় এমন ডেটা ফিল্টার করা  
+      `SELECT * FROM customers WHERE address IS NOT NULL;`
+
+- [ ] Calculated কলাম তৈরি করা (id * 10)  
+      `SELECT id, firstName, id * 10 AS custom_id FROM customers;`
+
+- [ ] LIMIT দিয়ে শুধুমাত্র ৫টি নাম ও শহর দেখানো  
+      `SELECT firstName, city FROM customers LIMIT 5;`
+
+- [ ] নাম অনুসারে সাজিয়ে প্রথম ১০টি রেকর্ড দেখানো  
+      `SELECT * FROM customers ORDER BY firstName LIMIT 10;`
+
+- [ ] Dhaka শহরের কাস্টমারদের ইমেইল দেখানো  
+      `SELECT email FROM customers WHERE city = 'Dhaka';`
+
+- [ ] '001' দিয়ে শেষ হয় এমন ফোন নাম্বার খোঁজা  
+      `SELECT * FROM customers WHERE phone LIKE '%001';`
+
+- [ ] UPPER ও LOWER ফাংশন ব্যবহার করে কেস পরিবর্তন  
+      `SELECT UPPER(firstName), LOWER(email) FROM customers;`
+
+- [ ] নামের দৈর্ঘ্য (LENGTH) বের করা  
+      `SELECT firstName, LENGTH(firstName) AS name_length FROM customers;`
+
 - [ ] UPDATE
 - [ ] UPDATE WHERE
 - [ ] DELETE FROM
