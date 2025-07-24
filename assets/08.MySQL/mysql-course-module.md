@@ -36,7 +36,7 @@
 - [ ] ALTER TABLE – MODIFY COLUMN
 - [ ] ALTER TABLE – DROP COLUMN
 
-- [ ] **ক্লাস ০২ কন্টেন্ট এখান থেকে শুরু এবং** [ক্লাস ভিডিও এখানে]()
+- [ ] **ক্লাস ০২ কন্টেন্ট এখান থেকে শুরু এবং** [ক্লাস ভিডিও এখানে](https://youtu.be/zNCEPCUBUm0)
 
 - [ ] SELECT দিয়ে সমস্ত ডেটা দেখানো  
       `SELECT * FROM customers;`
