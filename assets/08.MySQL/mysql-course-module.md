@@ -99,7 +99,7 @@
       `SELECT firstName, LENGTH(firstName) AS name_length FROM customers;`
 
 
-- [ ] **ক্লাস ০৩ কন্টেন্ট এখান থেকে শুরু এবং** [ক্লাস ভিডিও এখানে]()
+- [ ] **ক্লাস ০৩ কন্টেন্ট এখান থেকে শুরু এবং** [ক্লাস ভিডিও এখানে](https://youtu.be/0pQMexOVPk0)
 
 এই ক্লাসে আমরা শিখবো Aggregate Functions (SUM, AVG, COUNT ইত্যাদি), Group By, এবং Having Clause কিভাবে কাজ করে। এগুলো মূলত ডেটা বিশ্লেষণের জন্য ব্যবহার হয়। নিচে ধারাবাহিকভাবে প্রতিটি টপিক ও কোয়েরি দেওয়া হলো:
 
