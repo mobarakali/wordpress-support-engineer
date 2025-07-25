@@ -147,15 +147,6 @@
 
 
 
-### ৫। Aggregate Functions ও Grouping
-- [ ] SUM
-- [ ] AVG
-- [ ] MIN
-- [ ] MAX
-- [ ] COUNT
-- [ ] GROUP BY
-- [ ] HAVING
-- [ ] COUNT DISTINCT
 
 ### ৬। Constraints ও Keys
 - [ ] PRIMARY KEY
