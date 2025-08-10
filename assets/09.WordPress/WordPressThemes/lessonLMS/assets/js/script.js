@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function($) {
     /*----- menu icon toggle -----*/
     $("#navPhone").hide();
     $(".menu-btn").click(function(){
