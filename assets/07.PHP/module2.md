@@ -4,7 +4,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/04.TailwindCSS/course-module.md)
 [![PHP](https://img.shields.io/badge/-PHP-777BB4?style=flat-square&logo=php&logoColor=white)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/07.PHP/module2.md)
 [![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/08.MySQL/mysql-course-module.md)
-[![WordPress](https://img.shields.io/badge/-WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)]()
+[![WordPress](https://img.shields.io/badge/-WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/09.WordPress/wordpress-theme-development.md)
 
 - [ ] **ক্লাস ০১ কন্টেন্ট এখান থেকে শুরু এবং** [ক্লাস ভিডিও এখানে](https://www.youtube.com/watch?v=4oPAtDaeRhY)
 - [ ] **PHP বেসিক**
