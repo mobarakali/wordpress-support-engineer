@@ -185,3 +185,63 @@
 
     ### হোম ওয়ার্কঃ
     - সর্বনিম্ন ৬ সেকশনের একটি পোর্টফলিও ওয়েবসাইট ডিজাইন করতে হবে।
+
+
+# 🚀 Web Development Roadmap
+
+<svg viewBox="0 0 800 900" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .step { fill:#fff; stroke:#4f46e5; stroke-width:2; cursor:pointer; }
+    .text { font-family: sans-serif; font-size:16px; fill:#111; text-anchor:middle; dominant-baseline:middle;}
+    .arrow { fill:none; stroke:#4f46e5; stroke-width:3; marker-end:url(#arrowhead);}
+    a:hover .step { fill:#e0e7ff; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+      refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- Arrows (curve path like a tree) -->
+  <path d="M400 70 Q400 120 400 170" class="arrow"/>
+  <path d="M400 230 Q400 280 400 330" class="arrow"/>
+  <path d="M400 390 Q400 440 400 490" class="arrow"/>
+  <path d="M400 550 Q400 600 400 650" class="arrow"/>
+  <path d="M400 710 Q400 760 400 810" class="arrow"/>
+
+  <!-- Steps -->
+  <a xlink:href="https://developer.mozilla.org/docs/Web/HTML" target="_blank">
+    <circle class="step" cx="400" cy="40" r="40"/><text class="text" x="400" y="40">HTML</text>
+  </a>
+
+  <a xlink:href="https://developer.mozilla.org/docs/Web/CSS" target="_blank">
+    <circle class="step" cx="400" cy="200" r="40"/><text class="text" x="400" y="200">CSS</text>
+  </a>
+
+  <a xlink:href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank">
+    <circle class="step" cx="400" cy="360" r="40"/><text class="text" x="400" y="360">JavaScript</text>
+  </a>
+
+  <a xlink:href="https://docs.github.com/en" target="_blank">
+    <circle class="step" cx="400" cy="520" r="40"/><text class="text" x="400" y="520">Git & GitHub</text>
+  </a>
+
+  <a xlink:href="https://tailwindcss.com/docs" target="_blank">
+    <circle class="step" cx="400" cy="680" r="40"/><text class="text" x="400" y="680">Tailwind CSS</text>
+  </a>
+
+  <a xlink:href="https://www.php.net/docs.php" target="_blank">
+    <circle class="step" cx="400" cy="840" r="40"/><text class="text" x="400" y="840">PHP</text>
+  </a>
+
+  <a xlink:href="https://dev.mysql.com/doc/" target="_blank">
+    <circle class="step" cx="600" cy="840" r="40"/><text class="text" x="600" y="840">MySQL</text>
+  </a>
+
+  <a xlink:href="https://developer.wordpress.org/themes/" target="_blank">
+    <circle class="step" cx="200" cy="840" r="40"/><text class="text" x="200" y="840">WordPress Theme</text>
+  </a>
+</svg>
+
