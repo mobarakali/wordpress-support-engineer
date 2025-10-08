@@ -1,8 +1,11 @@
             <div class="blog-sidebar">
+
+                <?php dynamic_sidebar('blog_sidebar'); ?>
+
                 <div class="sidebar-widget search-widget">
-                    <h3 class="widget-title">Search</h3>
-                    <form>
-                        <input type="text" placeholder="Search...">
+                    <h3 class="widget-title"><?php _e('Search', 'lessonlms'); ?></h3>
+                    <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+                        <input type="search" name="s" placeholder="<?php esc_attr_e('Search...', 'lessonlms'); ?>" value="<?php echo get_search_query(); ?>" required>
                         <button type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
@@ -19,7 +22,7 @@
 
                         <?php foreach( $recent_posts as $post ) : ?>
                         <li>
-                            <a href="<?php echo get_permalink($post['ID']); ?>">
+                            <a href="<?php echo get_permalink($post['ID']); ?>" target="_blank">
                                 <?php echo esc_html($post['post_title']); ?>
                             </a>
                             <span class="post-date"><?php echo get_the_date('M d, Y', $post['ID']); ?></span>

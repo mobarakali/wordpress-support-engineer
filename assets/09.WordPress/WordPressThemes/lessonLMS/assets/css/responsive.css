@@ -431,6 +431,63 @@
         top: -100px;
     }
 
+    /* Single Course */
+    
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .course-content {
+        flex-direction: column;
+    }
+    
+    .course-sidebar {
+        width: 100%;
+    }
+    
+    .price-box {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-header h1 {
+        font-size: 32px;
+    }
+    
+    .course-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .tabs-nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+    
+    .instructor-profile {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .single-course {
+        padding: 50px 0;
+    }
+    
+    .course-image {
+        height: 250px;
+    }
+    
+    .tab-btn {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+
+
     /*----- testimonial section -----*/
     .student-details {
         width: 44%;

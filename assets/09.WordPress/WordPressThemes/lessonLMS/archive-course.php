@@ -1,12 +1,13 @@
-        <section class="courses">
-            <div class="container">
-                <div class="heading courses-heading">
-                    <h2>Our popular courses</h2>
-                    <p>Build new skills with new trendy courses and shine for the next future career.</p>
-                </div>
+    <?php get_header(); ?>
+    <section class="single-course">
+        <div class="container">
+            <div class="heading courses-heading">
+                <h2>All Courses</h2>
+                <p>Browse our complete collection of courses and find the perfect one for your career growth.</p>
+            </div>
 
-                <div class="courses-wrapper slick-items"> <!----- added slick this line ----->
-
+            <div class="courses-grid">
+                
                     <?php
                         $courses = new WP_Query(array(
                             'post_type'      => 'course',
@@ -54,7 +55,7 @@
                             <div class="price-btn">
                                 <span class="price">$<?php echo esc_html($price); ?></span>
 
-                                <div class="yellow-bg-btn book-now">Book Now</div>
+                                <a href="<?php echo get_permalink(); ?>" class="yellow-bg-btn book-now">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -63,11 +64,23 @@
                         <?php else : ?>
                             <h2>No course found.</h2>
                         <?php endif; wp_reset_postdata(); ?>
-
-                </div>
-
-                <div class="price-btn" style="margin-top:30px">
-                    <a href="<?php echo get_post_type_archive_link('course'); ?>" class="yellow-bg-btn" style="padding:10px 20px; border-radius:50px; margin: 0 auto;">সকল কোর্স দেখুন</a>
-                </div>
             </div>
-        </section>
+            
+            <div class="pagination">
+
+                <?php
+                    the_posts_pagination(array(
+                        'mid_size' => 2,
+                        'prev_text'=> __('Prev', 'lessonlms'),
+                        'next_text'=> __('Next', 'lessonlms'),
+                    ));
+                ?>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn next">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <?php get_footer(); ?>

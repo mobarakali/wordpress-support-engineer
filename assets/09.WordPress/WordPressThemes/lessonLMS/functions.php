@@ -56,7 +56,306 @@ add_action('after_setup_theme', 'lessonlms_theme_registration');
 
 
 
-function lessonlms_customize_register_footer($wp_customize) {
+function lessonlms_customize_register($wp_customize) {
+
+    // Hero Section Start Here
+    $wp_customize->add_section('hero_settings', array(
+        'title' => __('Hero Settings', 'lessonlms'),
+        'priority' => 30,
+    ));
+
+    // Hero Image
+    $wp_customize->add_setting('hero_image', array(
+        'default' => get_template_directory_uri() . '/assets/images/hero-img.png',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_image', array(
+        'label' => __('Hero Image', 'lessonlms'),
+        'settings' => 'hero_image',
+        'section' => 'hero_settings'
+    )));
+
+    
+    // Hero Title
+    $wp_customize->add_setting('hero_title', array(
+        'default' => 'Learn without limits and spread knowledge.',
+    ));
+    $wp_customize->add_control('hero_title', array(
+        'label' => __('Heor Title', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+    ));   
+
+    // Hero Description
+    $wp_customize->add_setting('hero_description', array(
+        'default' => 'Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world-class universities and companies.',
+    ));
+    $wp_customize->add_control('hero_description', array(
+        'label' => __('Hero Description', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'textarea'
+    ));
+
+    // Hero Button Text
+    $wp_customize->add_setting('hero_button_text', array(
+        'default' => 'See Courses',
+    ));
+    $wp_customize->add_control('hero_button_text', array(
+        'label' => __('Hero Button Text', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+    ));
+
+    // Hero Button Link
+    $wp_customize->add_setting('hero_button_link', array(
+        'default' => '#',
+    ));
+    $wp_customize->add_control('hero_button_link', array(
+        'label' => __('Hero Button Link', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'url'
+    ));
+
+    // video Text
+    $wp_customize->add_setting('hero_video_text', array(
+        'default' => 'Watch Video',
+    ));
+    $wp_customize->add_control('hero_video_text', array(
+        'label' => __('Hero Video Text', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+    ));
+
+    // Hero Video Link
+    $wp_customize->add_setting('hero_video_link', array(
+        'default' => '#',
+    ));
+    $wp_customize->add_control('hero_video_link', array(
+        'label' => __('Hero Video Link', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'url'
+    ));
+
+
+    // Engagement Title
+    $wp_customize->add_setting('engagement_title', array(
+        'default' => 'Recent engagement.',
+    ));
+    $wp_customize->add_control('engagement_title', array(
+        'label' => __('Engagement Title', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+    ));
+
+    // Students Count
+    $wp_customize->add_setting('students_count', array(
+        'default' => '50K',
+    ));
+    $wp_customize->add_control('students_count', array(
+        'label' => __('Students Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+    ));
+
+    // Students Label
+    $wp_customize->add_setting('students_label', array(
+        'default' => 'Students',
+    ));
+    $wp_customize->add_control('students_label', array(
+        'label' => __('Students Label', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+    ));
+    
+    // Courses Count
+    $wp_customize->add_setting('courses_count', array(
+        'default' => '70K',
+    ));
+    $wp_customize->add_control('courses_count', array(
+        'label' => __('Courses Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+    ));
+
+    // Courses Label
+    $wp_customize->add_setting('courses_label', array(
+        'default' => 'Courses',
+    ));
+    $wp_customize->add_control('courses_label', array(
+        'label' => __('Courses Label', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+    ));
+    
+    // UI/UX Courses Count
+    $wp_customize->add_setting('uiux_courses_count', array(
+        'default' => '20',
+    ));
+    $wp_customize->add_control('uiux_courses_count', array(
+        'label' => __('UI/UX Courses Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'number'
+    ));
+    
+    // Development Courses Count
+    $wp_customize->add_setting('dev_courses_count', array(
+        'default' => '20',
+    ));
+    $wp_customize->add_control('dev_courses_count', array(
+        'label' => __('Development Courses Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'number'
+    ));
+    
+    // Marketing Courses Count
+    $wp_customize->add_setting('marketing_courses_count', array(
+        'default' => '30',
+    ));
+    $wp_customize->add_control('marketing_courses_count', array(
+        'label' => __('Marketing Courses Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'number'
+    ));
+
+    // Features Section Start Here
+    $wp_customize->add_section('features_settings', array(
+        'title' => __('Features Settings', 'lessonlms'),
+        'priority' => 100,
+    ));
+
+    // Features Title
+    $wp_customize->add_setting('features_title', array(
+        'default' => 'Learner outcomes through our awesome platform.',
+    ));
+    $wp_customize->add_control('features_title', array(
+        'label' => __('Features Title', 'lessonlms'),
+        'section' => 'features_settings',
+        'type' => 'text'
+    ));
+
+
+    // Features Description
+    $wp_customize->add_setting('features_description', array(
+        'default' => '87% of people learning for professional development report career benefits like getting a promotion, a raise, or starting a new career.',
+    ));
+    $wp_customize->add_control('features_description', array(
+        'label' => __('Features Description', 'lessonlms'),
+        'section' => 'features_settings',
+        'type' => 'textarea'
+    ));
+
+
+    // Features Description Two
+    $wp_customize->add_setting('features_description_two', array(
+        'default' => 'Lesson Impact Report (2025)',
+    ));
+    $wp_customize->add_control('features_description_two', array(
+        'label' => __('Features Description Two', 'lessonlms'),
+        'section' => 'features_settings',
+        'type' => 'textarea'
+    ));
+
+    // Features Button Text
+    $wp_customize->add_setting('features_button_text', array(
+        'default' => 'Sign Up',
+    ));
+    $wp_customize->add_control('features_button_text', array(
+        'label' => __('Features Button Text', 'lessonlms'),
+        'section' => 'features_settings',
+        'type' => 'text'
+    ));
+
+
+    // Features Button URL
+    $wp_customize->add_setting('features_button_url', array(
+        'default' => '#',
+    ));
+    $wp_customize->add_control('features_button_url', array(
+        'label' => __('Features Button URL', 'lessonlms'),
+        'section' => 'features_settings',
+        'type' => 'url'
+    ));
+
+    // Featuer Image One
+    $wp_customize->add_setting('features_image_one', array(
+        'default' => get_template_directory_uri() . '/assets/images/features-img-1.png'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'features_image_one', array(
+        'label' => __('Featuer Image One', 'lessonlms'),
+        'settings' => 'features_image_one',
+        'section' => 'features_settings'
+    )));
+
+    // Featuer Image Two
+    $wp_customize->add_setting('features_image_two', array(
+        'default' => get_template_directory_uri() . '/assets/images/features-img-2.png'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'features_image_two', array(
+        'label' => __('Featuer Image Two', 'lessonlms'),
+        'settings' => 'features_image_two',
+        'section' => 'features_settings'
+    )));
+
+
+
+    // CTA Section Start Here
+    $wp_customize->add_section('cta_settings', array(
+        'title' => __('CTA Settings', 'lessonlms'),
+        'priority' => 105,
+    ));
+
+    // CTA Title
+    $wp_customize->add_setting('cta_title', array(
+        'default' => 'Take the next step toward your personal and professional goals with Lesson.',
+    ));
+    $wp_customize->add_control('cta_title', array(
+        'label' => __('CTA Title', 'lessonlms'),
+        'section' => 'cta_settings',
+        'type' => 'text'
+    ));
+
+
+    // CTA Description
+    $wp_customize->add_setting('cta_description', array(
+        'default' => 'Take the next step toward. Join now to receive personalized and more recommendations from the full Coursera catalog.',
+    ));
+    $wp_customize->add_control('cta_description', array(
+        'label' => __('CTA Description', 'lessonlms'),
+        'section' => 'cta_settings',
+        'type' => 'textarea'
+    ));
+
+    // CTA Button Text
+    $wp_customize->add_setting('cta_button_text', array(
+        'default' => 'Join Now',
+    ));
+    $wp_customize->add_control('cta_button_text', array(
+        'label' => __('CTA Button Text', 'lessonlms'),
+        'section' => 'cta_settings',
+        'type' => 'text'
+    ));
+
+
+    // CTA Button URL
+    $wp_customize->add_setting('cta_button_url', array(
+        'default' => '#',
+    ));
+    $wp_customize->add_control('cta_button_url', array(
+        'label' => __('CTA Button URL', 'lessonlms'),
+        'section' => 'cta_settings',
+        'type' => 'url'
+    ));
+
+    // CTA Image
+    $wp_customize->add_setting('cta_image', array(
+        'default' => get_template_directory_uri() . '/assets/images/cta-img.png'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'cta_image', array(
+        'label' => __('CTA Image', 'lessonlms'),
+        'settings' => 'cta_image',
+        'section' => 'cta_settings'
+    )));
+
+
 
     // Blog Section Start Here
     $wp_customize->add_section('blog_settings', array(
@@ -214,7 +513,7 @@ function lessonlms_customize_register_footer($wp_customize) {
         'type' => 'tel'
     ));
 }
-add_action('customize_register','lessonlms_customize_register_footer');
+add_action('customize_register','lessonlms_customize_register');
 
 
 function lessonlms_register_sidebar() {
@@ -229,3 +528,163 @@ function lessonlms_register_sidebar() {
     ));
 }
 add_action('widgets_init', 'lessonlms_register_sidebar');
+
+function lessonlms_register_course(){
+	register_post_type('course',
+		array(
+			'labels'      => array(
+				'name'          => __('Courses', 'lessonlms'),
+				'singular_name' => __('Course', 'lessonlms'),
+                'add_new'       => __('Add New Course', 'lessonlms'),
+                'add_new_item'  => __('Add New Course', 'lessonlms'),
+                'edit_item'     => __('Edit Course', 'lessonlms'),
+                'new_item'      => __('New Course', 'lessonlms'),
+                'search_items'  => __('Search Courses', 'lessonlms'),
+			),
+				'public'      => true,
+				'has_archive' => true,
+                'rewrite'     => array('slug' => 'course'),
+                'supports'    => array('title', 'editor', 'thumbnail'),
+                'menu_icon'   => 'dashicons-welcome-learn-more',
+		)
+	);
+
+}
+add_action('init','lessonlms_register_course');
+
+function lessonlms_course_meta_box() {
+    add_meta_box(
+        'course_details',
+        'Course Details',
+        'lessonlms_course_meta_box_callback',
+        'course',
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'lessonlms_course_meta_box');
+
+function lessonlms_course_meta_box_callback($post){
+    $price = get_post_meta($post->ID, 'price', true);
+    $original_price = get_post_meta($post->ID, 'original_price', true);
+    $video_hours = get_post_meta($post->ID, 'video_hours', true);
+    $article_count = get_post_meta($post->ID, 'article_count', true);
+    $downloadable_resources = get_post_meta($post->ID, 'downloadable_resources', true);
+    $language = get_post_meta($post->ID, 'language', true);
+    $subtitles = get_post_meta($post->ID, 'subtitles', true);
+    ?>
+    <div>
+        <p>
+            <label for="price">Price:</label>
+            <input type="number" name="price" step="0.01" value="<?php echo esc_attr($price); ?>">
+        </p>
+        <p>
+            <label for="original_price">Original Price:</label>
+            <input type="number" name="original_price" step="0.01" value="<?php echo esc_attr($original_price); ?>">
+        </p>
+        <p>
+            <label for="video_hours">Video Hours:</label>
+            <input type="number" name="video_hours" step="0.1" value="<?php echo esc_attr($video_hours); ?>">
+        </p>
+        <p>
+            <label for="article_count">Article Count:</label>
+            <input type="number" name="article_count" value="<?php echo esc_attr($article_count); ?>">
+        </p>
+        <p>
+            <label for="downloadable_resources">Downloadable Resources:</label>
+            <input type="number" name="downloadable_resources" value="<?php echo esc_attr($downloadable_resources); ?>">
+        </p>
+        <p>
+            <label for="language">Language:</label>
+            <input type="text" name="language" value="<?php echo esc_attr($language); ?>">
+        </p>
+        <p>
+            <label for="subtitles">Subtitles:</label>
+            <input type="text" name="subtitles" value="<?php echo esc_attr($subtitles); ?>">
+        </p>
+    </div>
+
+    <?php
+}
+
+function lessonlms_save_course_meta($post_id){
+
+    $fields = array(
+        'price', 'original_price', 'video_hours', 'article_count', 'downloadable_resources', 'language', 'subtitles',
+    );
+    foreach ($fields as $field) {
+        if(isset($_POST[$field])){
+            update_post_meta($post_id, $field, sanitize_text_field($_POST[$field]));
+        }
+    }
+}
+add_action('save_post_course', 'lessonlms_save_course_meta');
+
+// ইউজার রিভিউ সাবমিট করলে তা প্রসেস হবে এবং সেভ হবে।
+function lessonlms_handle_review_submission(){
+    if ( isset($_POST['submit_review']) && isset($_POST['course_id']) ) {
+        $course_id = intval($_POST['course_id']);
+        $rating = intval($_POST['rating']);
+        $review_text = sanitize_text_field($_POST['review_text']);
+        $reviewer_name = sanitize_text_field($_POST['reviewer_name']);
+
+        if ( $rating >= 1 && $rating <= 5 && !empty($review_text) && !empty($reviewer_name) ) {
+            $reviews = get_post_meta($course_id, '_course_reviews', true);
+
+            if ( !is_array($reviews) ) {
+                $reviews = array();
+            }
+
+            $new_review = array(
+                'rating' => $rating,
+                'review' => $review_text,
+                'name'   => $reviewer_name,
+                'date'   => current_time('mysql')
+            );
+
+            $reviews[] = $new_review;
+
+            update_post_meta($course_id, '_course_reviews', $reviews);
+
+            lessonlms_update_review_stats($course_id);
+        }
+    }
+}
+add_action('init', 'lessonlms_handle_review_submission');
+
+
+// কোর্সের রিভিউ থেকে মোট রিভিউ সংখ্যা এবং গড় রেটিং আপডেট করবে।
+function lessonlms_update_review_stats($course_id) {
+    $reviews = get_post_meta($course_id, '_course_reviews', true);
+
+    if ( is_array($reviews) && !empty($reviews) ) {
+        $total_rating = 0;
+        $review_count = count($reviews);
+
+        foreach ( $reviews as $review) {
+            $total_rating = $total_rating + $review['rating'];
+        }
+
+        $average_rating = round($total_rating / $review_count, 1);
+
+        update_post_meta($course_id, '_total_reviews', $review_count);
+        update_post_meta($course_id, '_average_rating', $average_rating);
+    }
+}
+
+// কোর্সের মোট রিভিউ ও গড় রেটিং রিটার্ন করে
+function lessonlms_get_review_stats($course_id) {
+    $total_reviews = get_post_meta($course_id, '_total_reviews', true) ?: 0;
+    $average_rating = get_post_meta($course_id, '_average_rating', true) ?: 0;
+
+    return array(
+        'total_reviews' => $total_reviews,
+        'average_rating' => $average_rating
+    );
+}
+
+
+// কোর্সের সকল রিভিউ অ্যারে রিটার্ন করে
+function lessonlms_get_course_reviews($course_id){
+    return get_post_meta($course_id, '_course_reviews', true) ?: array();
+}
